@@ -1,0 +1,57 @@
+.top-donors {
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .top-donors ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotate 10s infinite linear;
+  }
+  
+  .top-donors ul li {
+    font-size: 20px;
+    color: #fff;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fade-slide 3s infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fade-slide {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+    20% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    80% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+  }
